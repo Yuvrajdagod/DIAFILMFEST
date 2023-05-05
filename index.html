@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIA Filmfest | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</head>
+<style>
+  .popup {
+    background-color: #ffffffe8;
+    width: 420px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    display: none;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .popup button {
+    display: block;
+    margin: 0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff7f;
+    background: #03549a;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .popup h2 {
+    margin-top: -20px;
+  }
+
+  .popup p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+  }
+
+  .popuplink {
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #0f72e5;
+    border-radius: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 0;
+  }
+
+  .navbar {
+    font-size: 20px;
+    backdrop-filter: brightness(50%);
+  }
+
+  .poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .curly {
+    font-family: 'Cedarville Cursive', cursive;
+    font-weight: bold;
+  }
+
+  .content {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: brightness(50%);
+  }
+
+  .content h1 {
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+    animation: fade-in;
+    animation-duration: 2s;
+  }
+
+  .back-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    min-height: 100%;
+    min-width: 100%;
+  }
+
+  .btn-custom {
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    color: white;
+    outline: 1px solid white;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+
+  .btn-custom:hover {
+    transition: 0.3s;
+    color: black;
+    background-color: white;
+  }
+
+  .spt {
+    font-size: 30px;
+  }
+
+  .cd {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .maintextfont {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .bg-img {
+    background-image: url('https://cdn.thecoolist.com/wp-content/uploads/2016/04/Pentacon-Six-TL-vintage-camera.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+  }
+
+  @media only screen and (max-width: 768px) {
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .info-vid {
+      width: 560px;
+      height: 315px;
+    }
+
+
+  }
+
+
+  @media only screen and (max-width: 1200px) {
+
+    .info-vid {
+      width: 560px;
+      height: 315px;
+    }
+
+
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    .info-vid {
+      width: 360px;
+      height: 215px;
+    }
+
+
+  }
+
+  @media only screen and (max-width: 500px) {
+
+    .popup {
+      background-color: #ffffffe8;
+      width: 320px;
+      padding: 30px 40px;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      border-radius: 8px;
+      font-family: "Poppins", sans-serif;
+      display: none;
+      text-align: center;
+      z-index: 10;
+    }
+
+
+  }
+
+  .asdasd {
+    backdrop-filter: brightness(50%);
+  }
+
+  body {
+    background-color: #111;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
+  }
+
+  .test {}
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0.;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+
+<body class="">
+
+  <!-- <video autoplay loop muted plays-inline class="back-video">
+    <source src="pexels-tima-miroshnichenko-7988642-4096x2160-25fps.mp4"> 
+  </video> -->
+
+  <div class="popup">
+    <button id="close">&times;</button>
+    <h2>Lights, Camera, Action!</h2>
+    <p>
+      🎬Calling student filmmakers in years 7-12! Submit your 3-minute-long films to our festival. Click the link to
+      find out more
+    </p>
+    <a class="popuplink" href="guidelines.html">Sign up Now</a>
+  </div>
+
+  <div class="bg-img">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-trans">
+      <div class="container-fluid">
+        <div class="navbar-brand">
+          <a href="index.html">
+            <img src="film_fest_logo_trans.png" alt="" width="50px">
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="guidelines.html">Guidelines</a>
+            <a class="nav-link" href="how_to_submit.html">How to upload</a>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+
+    <div class="p-5 asdasd"> </div>
+
+    <div class="d-flex content">
+
+
+      <h1> <span class="maintextfont">DIA</span> <span class="maintextfont">FilmFest</span> </h1>
+      <br>
+
+
+
+
+      <img class="test" src="dia_ff_icons_final-removebg-preview (1).png" width=" 280px">
+
+      <br>
+      <p class="text-white poppins mt-1 m-2">
+        Calling all year 7-12s!
+
+        Create a short 3 minute film based on any of the 9 different themes <br> (which are specified in the submission
+        guidelines), and earn a chance to <br> have your film played at Cinema
+      </p>
+      <h2 class="maintextfont text-white">Prizes</h2>
+
+      <p class="text-white poppins mt-1 m-2">
+
+        Best Film:
+        <br>
+
+
+        Canon EOS 400D Camera + Lens kit
+
+        Lifetime Premium subscription to DaVinci Resolve
+
+
+        <br>
+        Runners-up:
+        <br>
+
+
+
+        Free video editing workshop
+
+        Trophies
+      </p>
+
+      <p id="demo" class="text-white cd"></p>
+
+      <a href="guidelines.html"><button style="width: 300px" class="btn btn-custom">Sign up now!</button></a>
+      <br>
+      <br>
+
+
+
+      <br>
+
+
+
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="d-flex justify-content-center flex-column align-items-center">
+
+    <video class="info-vid rounded" controls loop width="1120" height="630">
+      <source src="D61E3680-A0D5-41FD-889B-936ED2CD2F4B1.mp4">
+    </video>
+
+    <br>
+    <br>
+    <section style="width: 350px;" class="sponsors bg-white p-3 d-flex justify-content-evenly rounded">
+      <img
+        src="https://www.pngkey.com/png/full/124-1246301_blackmagic-design-logo-blackmagic-design-logo-transparent.png"
+        width="160px" height="" alt="">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Canon_logo_vector.png" width="75px" alt="">
+      <img
+        src="https://www.ignitecreativeacademy.com/wp-content/uploads/2022/07/cropped-Ignite-Creative-Academy-FAV-1.png"
+        width="50px" alt="">
+    </section>
+
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+  <script>
+
+    let closebtn = document.getElementById('close')
+
+    closebtn.addEventListener('click', function () {
+      document.querySelector(".popup").style.
+        display = "none";
+    })
+
+    window.addEventListener("load", function () {
+      setTimeout(
+        function open(event) {
+          document.querySelector(".popup").style.
+            display = "block";
+        },
+        1000
+      )
+    });
+
+
+    /*document.querySelector("#close").addEventListener
+    ("click", function(){});*/
+    window.addEventListener("load", function () {
+      setTimeout(
+        function close(event) {
+          document.querySelector(".popup").style.display = "none";
+        },
+        10000
+      )
+    });
+
+    // Set the date we're counting down to
+    var countDownDate = new Date("May 22, 2023 0:0:0").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+
+
+
+</body>
+
+</html>
